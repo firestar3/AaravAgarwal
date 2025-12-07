@@ -5,40 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarav Agarwal</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            color: #222;
-        }
-        header {
-            background: #1a1a1a;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h2 {
-            margin-top: 2rem;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: .5rem;
-        }
-        ul {
-            line-height: 1.8;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    /* GLOBAL */
+    body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #f3f3f3;
+        color: #222;
+        line-height: 1.65;
+        scroll-behavior: smooth;
+    }
+
+    /* NAVIGATION */
+    nav {
+        background: rgba(17, 17, 17, 0.85);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(6px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    nav a {
+        color: #eee;
+        margin-left: 1.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        padding-bottom: 2px;
+        transition: 0.25s ease;
+        border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+        color: #4dabf7;
+        border-bottom: 2px solid #4dabf7;
+    }
+
+    /* HEADER */
+    header {
+        text-align: center;
+        padding: 5rem 1rem;
+        background: linear-gradient(135deg, #0e0e0e, #343434);
+        color: white;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: .5rem;
+        letter-spacing: 1px;
+        animation: fadeDown 0.9s ease;
+    }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        animation: fadeUp 0.9s ease;
+    }
+
+    @keyframes fadeDown {
+        from { opacity: 0; transform: translateY(-12px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CONTENT CONTAINER */
+    .container {
+        max-width: 900px;
+        margin: 2.5rem auto;
+        padding: 2.5rem;
+        background: rgba(255,255,255,0.85);
+        border-radius: 18px;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+        backdrop-filter: blur(4px);
+        animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HEADINGS */
+    h2 {
+        border-left: 4px solid #4dabf7;
+        padding-left: 0.8rem;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.06);
+    }
+
+    /* LISTS */
+    ul {
+        padding-left: 1.3rem;
+        margin-top: 1rem;
+    }
+    ul li {
+        padding: 4px 0;
+        transition: 0.2s ease;
+    }
+    ul li:hover {
+        color: #4dabf7;
+        transform: translateX(4px);
+    }
+
+    /* IMAGE */
+    img {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 1rem;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        transition: 0.3s ease;
+    }
+    img:hover {
+        transform: scale(1.015);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+        background: #0f0f0f;
+        color: #bbb;
+        font-size: 0.95rem;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.25);
+    }
+</style>
+
 </head>
 <body>
     <header>
